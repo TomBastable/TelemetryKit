@@ -420,14 +420,13 @@ extension TKListener: TKDelegate {
 	}
 	
 	func update(carTelemetries: [TKCarTelemetryData]) {
-		// TODO: only propagate delegate info if driver is among the requested ones
-		/*
+
 		for (i, ct) in carTelemetries.enumerated() {
 			if i < _sessionLiveInfo.participants.count {
-				uiDelegate?.driver(_sessionLiveInfo.driver(no: UInt8(i)) ?? TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
+				print(ct.throttle, "throttle")
 			}
 		}
-		*/
+		
 	}
 	
 	func update(carStatuses: [TKCarStatusData]) {
