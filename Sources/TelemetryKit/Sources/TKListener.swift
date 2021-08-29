@@ -421,9 +421,11 @@ extension TKListener: TKDelegate {
 	
 	func update(carTelemetries: [TKCarTelemetryData]) {
 
-        if let cts = carTelemetries.enumerated(), let ct = cts[0] {
+        for (i, ct) in carTelemetries.enumerated() {
+            if i == 0 {
+                uiDelegate?.driver(TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
+            }
 			
-			uiDelegate?.driver(TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
 			
 		}
 		
