@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol TKDelegate {
+protocol TKDelegate {
 	
 	// Session-related messages
 	func update(sessionInfo: TKSessionPacket)
