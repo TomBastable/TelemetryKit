@@ -143,6 +143,7 @@ internal struct TKCarTelemetryPacket: TKPacket {
 	
 	func process(withDelegate delegate: TKDelegate) {
 		delegate.update(carTelemetries: carTelemetryData)
+		print(carTelemetryData)
 	}
 
 }
