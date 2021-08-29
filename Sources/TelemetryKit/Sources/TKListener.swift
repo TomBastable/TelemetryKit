@@ -25,7 +25,7 @@ public class TKListener: NSObject {
 	public var uiDelegate: TKUIDelegate?
 	public var voiceDelegate: TKVoiceDelegate?
 	public var acceptedPacketTypes: Set<TKPacketType>!
-	internal var delegate: TKDelegate!
+	var delegate: TKDelegate!
     private let liveSessionInfoQueue: DispatchQueue!
 	private var socket: GCDAsyncUdpSocket!
 	private var _liveSessionInfoUnsafe: TKLiveSessionInfo! // Do NOT access this directly!
