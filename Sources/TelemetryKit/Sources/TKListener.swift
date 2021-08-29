@@ -422,9 +422,9 @@ extension TKListener: TKDelegate {
 	func update(carTelemetries: [TKCarTelemetryData]) {
 
 		for (i, ct) in carTelemetries.enumerated() {
-			if i < _sessionLiveInfo.participants.count {
+			
 				print(ct.throttle, "throttle")
-			}
+			
 		}
 		
 	}
