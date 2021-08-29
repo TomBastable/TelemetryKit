@@ -98,7 +98,7 @@ extension TKWeatherForecastSample: CustomStringConvertible {
 	
 }
 
-internal struct TKSessionPacket: TKPacket {
+struct TKSessionPacket: TKPacket {
     
     static var NB_MARSHAL_ZONES_F1_2020 = 21
     static var NB_MARSHAL_ZONES_F1_2021 = 21
