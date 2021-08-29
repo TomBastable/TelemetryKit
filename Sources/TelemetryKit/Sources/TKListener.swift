@@ -423,7 +423,7 @@ extension TKListener: TKDelegate {
 
 		for (i, ct) in carTelemetries.enumerated() {
 			
-			uiDelegate?.driver(_sessionLiveInfo.driver(no: UInt8(i)) ?? TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
+			uiDelegate?.driver(TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
 			
 		}
 		
