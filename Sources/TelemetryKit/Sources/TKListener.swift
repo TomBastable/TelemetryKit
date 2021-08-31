@@ -425,10 +425,7 @@ extension TKListener: TKDelegate {
             if i == 0 {
                 uiDelegate?.driver(TKParticipantInfo(), liveTelemetrySpeed: ct.speed, throttle: ct.throttle, steer: ct.steer, brake: ct.brake, clutch: ct.clutch, gear: ct.gear, engineRPM: ct.engineRPM, drs: ct.drs.boolValue)
             }
-			
-			
 		}
-		
 	}
 	
 	func update(carStatuses: [TKCarStatusData]) {
